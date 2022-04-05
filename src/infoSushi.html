@@ -83,8 +83,7 @@
             font-size: 1.8rem;
             color: var(--black);
         }
-        .content{
-            min-height: calc(100vh - 160px);
+        .container{
             background-image: url(https://i.postimg.cc/SNX7t4Xt/pexels-ricardo-rojas-400.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -94,6 +93,9 @@
             width: 90%;
             margin: 0 auto;
             padding-top: 24px;
+        }
+        .article:nth-last-child(1){
+            margin-bottom: 24px;
         }
         .imgRamen{
             display: none;
@@ -105,6 +107,11 @@
             display: flex;
             justify-content: space-between;
             font-size: 1.3rem;
+        }
+        .footer{
+            height: 50px;
+            background-color: black;
+            padding-left: 8px;
         }
     </style>
 </head>
@@ -146,6 +153,48 @@
                     <h2 id="precio">$26.000</h2>
                 </div>
                 <img class="imgRamen" id="imgBreakFresh" src="https://i.postimg.cc/kGNcwFYF/break-Fresh-400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuTempura()">
+                    <h2 id="title">Otaku Tempura</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuTempura" src="https://i.postimg.cc/MZ7RXYct/Otaku-Tempura400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuMix()">
+                    <h2 id="title">Otaku Mix</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuMix" src="https://i.postimg.cc/br92MzX4/Otaku-Mix400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuFresh()">
+                    <h2 id="title">Otaku Fresh</h2>
+                    <h2 id="precio">$26.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuFresh" src="https://i.postimg.cc/15yFFNwS/Otaku-Fresh400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheTempura()">
+                    <h2 id="title">Parche Tempura</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheTempura" src="https://i.postimg.cc/MZ7RXYct/Parche-Tempura400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheMix()">
+                    <h2 id="title">Parche Mix</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheMix" src="https://i.postimg.cc/br92MzX4/Parche-Mix400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheFresh()">
+                    <h2 id="title">Parche Fresh</h2>
+                    <h2 id="precio">$26.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheFresh" src="https://i.postimg.cc/15yFFNwS/Parche-Fresh400.png" alt="Producto">
             </article>
         </section>
         <footer class="footer">
