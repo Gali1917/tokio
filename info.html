@@ -11,6 +11,8 @@
 
     <title>Tokio | Comida Japonesa</title>
 
+    <script src="./src/info.js"></script>
+
     <style>
         :root{
             --red: #BA1124;
@@ -82,88 +84,36 @@
             color: var(--black);
         }
         .content{
-            background-image: url(./img/portada.jpg);
+            min-height: calc(100vh - 160px);
+            background-image: url(https://i.postimg.cc/gcs1F1LY/pexels-katerina-holmes-400.jpg);
             background-size: cover;
             background-repeat: no-repeat;
-            background-position-x: -120px;
             background-attachment: fixed;
-
         }
         .article{
-            width: 80%;
-            margin: 0 auto;
-            padding-top: 48px;
-
-        }
-        .article h1{
-            text-shadow: 4px 4px 4px black;
-        }
-        .article img{
-            width: 100%;
-            height: 200px;
-            margin-top: 8px;
-            object-fit: cover;
-            border: 1px solid var(--orange);
-            border-radius: 16px;
-            box-shadow: 4px 4px 4px black;
-
-        }
-        .back{
-            display: none;
-            position: absolute;
-            height: 100vh;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.445);
-            top: 0;
-        }
-        .main{
-            position: relative;
             width: 90%;
-            min-height: 50%;
-            background-color: black;
             margin: 0 auto;
-            margin-top: 70px;
-            padding: 24px;
-            border: 4px solid white;
-            border-radius: 48px;
-            box-shadow: 0 8px 12px var(--orange);
+            padding-top: 24px;
         }
-        .iconClose{
-            width: 62px;
-            position: absolute;
-            right: 0;
-            left: 0;
-            margin: auto;
-            margin-top: 40px;
-            border: 1px solid white;
-            border-radius: 50%;
-            padding: 8px;
-
-        }
-        .imgInfo{
-            object-fit: cover;
+        #imgPollo{
+            display: none;
             width: 100%;
-            height: 150px;
         }
-        .tipos{
-            background-color: black;
-            color: var(--orange);
-            font-weight: bold;
-            height: 28px;
-            padding: 4px;
-            position: absolute;
-            border: 2px solid var(--orange);
-            right: 24px;
-            bottom: 24px;
-
+        #imgMar{
+            display: none;
+            width: 100%;
         }
-        .footer{
-            height: 50px;
-            background-color: var(--orange);
+        #imgMixto{
+            display: none;
+            width: 100%;
+        }
+        #item{
+            text-shadow: 4px 4px 4px var(--black);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
         }
     </style>
-
-    <script src="./index.js"></script>
 </head>
 <body>
     <div class="container">
@@ -184,36 +134,26 @@
         </nav>
         <section class="content" id="content">
             <article class="article">
-                <h1>Ramen</h1>
-                <img src="./img/ramen.jpg" alt="Ramen" class="Ramen" onclick="ramen()">
+                <div id="item" onclick="ramenPollo()">
+                    <h2 id="title">Ramen de Pollo</h2>
+                    <h2 id="precio">$16.500</h2>
+                </div>
+                <img class="imgRamen" id="imgPollo" src="https://i.postimg.cc/sxS3D4tP/ramen-Pollo-400.png" alt="Producto">
             </article>
             <article class="article">
-                <h1>Sushi</h1>
-                <img src="./img/sushi.jpg" alt="Sushi" class="Sushi" onclick="sushi()">
+                <div id="item" onclick="ramenMar()">
+                    <h2 id="title">Ramen de Mar</h2>
+                    <h2 id="precio">$21.000</h2>
+                </div>
+                <img class="imgRamen" id="imgMar" src="https://i.postimg.cc/hG2Rqwzk/ramen-Mar-400.png" alt="Producto">
             </article>
             <article class="article">
-                <h1>Arroz</h1>
-                <img src="./img/arroz.jpg" alt="Arroz" class="Arroz"
-                onclick="arroz()">
+                <div id="item" onclick="ramenMixto()">
+                    <h2 id="title">Ramen de Mixto</h2>
+                    <h2 id="precio">$19.500</h2>
+                </div>
+                <img class="imgRamen" id="imgMixto" src="https://i.postimg.cc/053nwR42/ramen-Mixto-400.png" alt="Producto">
             </article>
-            <article class="article">
-                <h1>Entradas</h1>
-                <img src="./img/entradas.jpg" alt="Entradas" class="Entradas" onclick="entradas()">
-            </article>
-            <article class="article">
-                <h1>Bebidas</h1>
-                <img src="./img/bebida.jpg" alt="Bebidas" class="Bebidas" onclick="bebidas()">
-            </article>
-        </section>
-        <section class="back" id="back">
-            <article class="main" id="mainRamen">
-                <p id="pMain"></p>
-                <img id="imgInf" class="imgInfo" src="" alt="Ramen">
-                <a href="./info.html">
-                    <button id="buttonMore" class="tipos" type="button">Tipos de Ramen</button>
-                </a>
-            </article>
-            <img class="iconClose" src="./img/cerrar.png" alt="cerrar" onclick="buttonClose()">
         </section>
         <footer class="footer">
             <p class="description-footer">Tokio | Comida Japonesa</p> 
