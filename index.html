@@ -33,6 +33,10 @@
             background-color: black;
             color: white;
             font-size: 1.6rem;
+            background-image: url(https://i.postimg.cc/5t7Pvycn/portada-400.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         .header{
             height: 70px;
@@ -44,7 +48,7 @@
             top: 0;
             position: fixed;
         }
-        .header img{
+        .logo{
             width: 80px;
         }
         .nav-bar{
@@ -53,7 +57,7 @@
             height: 40px;
         }
         .nav-bar ul{
-            height: 40px;
+            height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -81,19 +85,14 @@
             font-size: 1.8rem;
             color: var(--black);
         }
-        .container{
-            background-image: url(https://i.postimg.cc/5t7Pvycn/portada-400.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+
         .article{
             width: 80%;
             margin: 0 auto;
             padding-top: 48px;
         }
         .article:nth-last-child(1){
-            margin-bottom: 24px;
+            margin-bottom: 48px;
         }
         .article h1{
             text-shadow: 4px 4px 4px black;
@@ -106,8 +105,10 @@
             border: 1px solid var(--orange);
             border-radius: 16px;
             box-shadow: 4px 4px 4px black;
-
         }
+        .description{
+                display: none;
+            }
         .back{
             display: none;
             position: absolute;
@@ -163,6 +164,101 @@
             padding-left: 8px;
 
         }
+        @media(min-width: 500px){
+            .article{
+                display: flex;
+                flex-direction: column;
+            }
+            .article h1{
+                font-size: 2.5rem;
+            }
+            .article:nth-child(2),
+            .article:nth-child(4){
+                align-items: end;
+            }
+            .article img{
+                height: 300px;
+                max-width: 400px;
+            }
+            .nav-bar a{
+                font-size: 2.5rem;
+            }
+        }
+        @media(min-width: 1024px){
+            .header{
+                height: 110px;
+            }
+            .logo{
+                width: 110px;
+            }
+            .title{
+                font-size: 5rem;
+            }
+            .nav-bar{
+                margin-top: 110px;
+                height: 60px;
+                background: none;
+
+
+            }
+            .nav-bar ul{
+                justify-content: space-evenly;
+                max-width: 1024px;
+                margin: 0 auto;
+                border-radius: 40px;
+                
+                
+            }
+            .nav-bar li{
+                border-end-end-radius: 70px;
+                border-bottom-left-radius: 70px;
+            }
+            .nav-bar a{
+                line-height: 70px;
+                font-size: 3.5rem;
+            }
+            .content{
+                max-width: 1024px;
+                margin: 0 auto;
+                /* display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between; */
+            }
+            
+            .article{
+                width: calc(100% - 100px);
+                margin: 48px;
+                padding: 24px;
+
+            }
+            .article:nth-child(1),
+            .article:nth-child(2){
+                margin-top: 56px;
+            }
+            .article div{
+                display: flex;
+                flex-direction: row;
+                background-color: #f3881689;
+                border-radius: 24px;
+            }
+            .article h1{
+                font-size: 3rem;
+            }
+            .article img{
+                height: 400px;
+                max-width: 480px;
+                margin: 0;
+                box-shadow: none;
+            }
+            .description{
+                display: block;
+                margin: 12px 0 0 24px;
+                font-size: 2.2rem;
+            }
+            .footer{
+                margin-top: 56px;
+            }
+        }
     </style>
 
     <script src="./index.js"></script>
@@ -187,24 +283,38 @@
         <section class="content" id="content">
             <article class="article">
                 <h1>Ramen</h1>
-                <img src="https://i.postimg.cc/J4ppDxfj/ramen-400.jpg" alt="Ramen" class="Ramen" onclick="ramen()">
+                <div>
+                    <img src="https://i.postimg.cc/J4ppDxfj/ramen-400.jpg" alt="Ramen" class="Ramen" onclick="ramen()">
+                    <p class="description">Si bien cada región de Japón tiene su propia receta de ramen, la preparación básica consiste en distintos tipos de fideos japoneses servidos en un caldo preparado comúnmente a base de hueso de cerdo o pollo y distintas verduras, sus sabores varían entre la pasta de mismo.</p>
+                </div>
             </article>
             <article class="article">
                 <h1>Sushi</h1>
-                <img src="https://i.postimg.cc/CxdmjD0X/sushi-400.jpg" alt="Sushi" class="Sushi" onclick="sushi()">
+                <div>
+                    <img src="https://i.postimg.cc/CxdmjD0X/sushi-400.jpg" alt="Sushi" class="Sushi" onclick="sushi()">
+                    <p class="description">Es un plato típico de origen japonés basado en arroz aderezado con vinagre de arroz, azúcar y sal y combinado con otros ingredientes como pescados crudos, mariscos, verduras, etc. Este plato es uno de los más reconocidos de la gastronomía japonesa y uno de los más populares internacionalmente.</p>
+                </div>
             </article>
             <article class="article">
                 <h1>Arroz</h1>
-                <img src="https://i.postimg.cc/hGdsYBf0/arroz-400.jpg" alt="Arroz" class="Arroz"
-                onclick="arroz()">
+                <div>
+                    <img src="https://i.postimg.cc/hGdsYBf0/arroz-400.jpg" alt="Arroz" class="Arroz"
+                    onclick="arroz()">
+                    <p class="description">El arroz japonés es el elemento esencial de la comida japonesa, hasta tal punto que su denominación gohan, sirve tanto para arroz blanco como para comida. En Japón se cultiva y come principalmente dos tipos de arroz.</p>
+                </div>
             </article>
             <article class="article">
                 <h1>Entradas</h1>
-                <img src="https://i.postimg.cc/B6fp9VFf/entradas-400.jpg" alt="Entradas" class="Entradas" onclick="entradas()">
-            </article>
+                <div>
+                    <img src="https://i.postimg.cc/B6fp9VFf/entradas-400.jpg" alt="Entradas" class="Entradas" onclick="entradas()"><p class="description">Que te parece una deliciosa entrada mientras esperas tu comida, o un magnifico postre para cerrar la velada? No te pierdas nuestros deliciosos snacks.</p>
+                </div>
+                </article>
             <article class="article">
                 <h1>Bebidas</h1>
-                <img src="https://i.postimg.cc/CxtJJ1L1/bebida-400.jpg" alt="Bebidas" class="Bebidas" onclick="bebidas()">
+                <div>
+                    <img src="https://i.postimg.cc/CxtJJ1L1/bebida-400.jpg" alt="Bebidas" class="Bebidas" onclick="bebidas()">
+                    <p class="description">Las bebidas típicas de Japón son parte de su cultura y del protocolo tradicional de la tierra del sol naciente. Son muchas, desde licores como el sake, derivado del arroz, hasta innumerables cervezas locales.</p>
+                </div>
             </article>
         </section>
         <section class="back" id="back">

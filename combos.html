@@ -27,12 +27,19 @@
             font-size: 62.5%;
             font-family: 'Kalam', cursive;
         }
+        body{
+            background-color: black;
+            background-image: url(https://i.postimg.cc/Pr9KdPRt/pexels-maria-orlova-400.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
         .container{
             width: 100%;
             height: 100vh;
-            background-color: black;
             color: white;
             font-size: 1.6rem;
+            
         }
         .header{
             height: 70px;
@@ -82,11 +89,6 @@
             color: var(--white);
         }
         .content{
-            background-image: url(https://i.postimg.cc/Pr9KdPRt/pexels-maria-orlova-400.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: var(--white);
         }
         .article{
             width: 80%;
@@ -111,8 +113,95 @@
         }
         
         .footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
             height: 50px;
-            background-color: var(--orange);
+            background-color: black;
+            padding-left: 8px;
+        }
+        @media(min-width: 500px){
+            .article img{
+                height: 300px;
+            }
+            .nav-bar a{
+                font-size: 2.5rem;
+            }
+        }
+        @media(min-width: 1024px){
+            .header{
+                height: 110px;
+            }
+            .logo{
+                width: 110px;
+            }
+            .title{
+                font-size: 5rem;
+            }
+            .nav-bar{
+                margin-top: 110px;
+                height: 60px;
+                background: none;
+
+
+            }
+            .nav-bar ul{
+                justify-content: space-evenly;
+                max-width: 1024px;
+                margin: 0 auto;
+                border-radius: 40px;
+                
+                
+            }
+            .nav-bar li{
+                border-end-end-radius: 70px;
+                border-bottom-left-radius: 70px;
+            }
+            .nav-bar a{
+                line-height: 70px;
+                font-size: 3.5rem;
+            }
+            .content{
+                max-width: 1024px;
+                margin: 0 auto;
+                /* display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between; */
+            }
+            
+            .article{
+                width: calc(100% - 100px);
+                margin: 48px;
+                padding: 24px;
+
+            }
+            .article:nth-child(1),
+            .article:nth-child(2){
+                margin-top: 56px;
+            }
+            .article div{
+                display: flex;
+                flex-direction: row;
+                background-color: #f3881689;
+                border-radius: 24px;
+            }
+            .article h1{
+                font-size: 3rem;
+            }
+            .article img{
+                height: 400px;
+                max-width: 480px;
+                margin: 0;
+                box-shadow: none;
+            }
+            .description{
+                display: block;
+                margin: 12px 0 0 24px;
+                font-size: 2.2rem;
+            }
+            .footer{
+                margin-top: 56px;
+            }
         }
     </style>
 
