@@ -60,7 +60,7 @@
             height: 40px;
         }
         .nav-bar ul{
-            height: 40px;
+            height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -88,8 +88,6 @@
             font-size: 1.8rem;
             color: var(--white);
         }
-        .content{
-        }
         .article{
             width: 80%;
             color: var(--orange);
@@ -111,7 +109,6 @@
             border-radius: 16px;
             box-shadow: 4px 4px 4px black;
         }
-        
         .footer{
             position: fixed;
             bottom: 0;
@@ -142,16 +139,12 @@
                 margin-top: 110px;
                 height: 60px;
                 background: none;
-
-
             }
             .nav-bar ul{
                 justify-content: space-evenly;
                 max-width: 1024px;
                 margin: 0 auto;
                 border-radius: 40px;
-                
-                
             }
             .nav-bar li{
                 border-end-end-radius: 70px;
@@ -200,8 +193,13 @@
                 font-size: 2.2rem;
             }
             .footer{
-                margin-top: 56px;
-            }
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: var(--orange);
+            padding-left: 8px;
+        }
         }
     </style>
 
@@ -229,7 +227,7 @@
                 <h1>Bandeja Mixta de Sushi</h1>
                 <img id="ramen" src="https://i.postimg.cc/ZqKLcp9x/pexels-olga-lioncat-400.jpg" alt="Ramen" class="Ramen" onclick="openRamen()">
             </article>
-
+        </section>
         <footer class="footer">
             <p class="description-footer">Tokio | Comida Japonesa</p> 
             <p>Calle 9 # 24 -32, Yopal Casanare</p>        

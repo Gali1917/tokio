@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Tokio | Comida Japonesa</title>
+
+    <script src="./infoSushi.js"></script>
+
+    <style>
+        :root{
+            --red: #BA1124;
+            --orange: #F38816;
+            --black: #000000;
+            --white: #ffffff;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: 'Kalam', cursive;
+        }
+        body{
+            background-color: black;
+            background-image: url(https://i.postimg.cc/SNX7t4Xt/pexels-ricardo-rojas-400.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 1.6rem;
+        }
+        /* .logo{
+            width: 80px;
+        } */
+        .article{
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 24px;
+        }
+        .article:nth-last-child(1){
+            margin-bottom: 24px;
+        }
+        .imgRamen{
+            display: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #item{
+            text-shadow: 4px 4px 4px var(--black);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+        }
+
+        @media (min-width: 500px){
+            .content{
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 24px;
+            }
+            /* .nav-bar a{
+                font-size: 2.5rem;
+            } */
+            .article h2{
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="content" id="content">
+            <article class="article">
+                <div id="item" onclick="breakTempura()">
+                    <h2 id="title">Break Tempura</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgBreakTempura" src="https://i.postimg.cc/XvjHphJK/break-Tempura-400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="breakMix()">
+                    <h2 id="title">Break Mix</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgBreakMix" src="https://i.postimg.cc/sXwRM7sx/break-Mix-400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="breakFresh()">
+                    <h2 id="title">Break Fresh</h2>
+                    <h2 id="precio">$26.000</h2>
+                </div>
+                <img class="imgRamen" id="imgBreakFresh" src="https://i.postimg.cc/kGNcwFYF/break-Fresh-400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuTempura()">
+                    <h2 id="title">Otaku Tempura</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuTempura" src="https://i.postimg.cc/MZ7RXYct/Otaku-Tempura400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuMix()">
+                    <h2 id="title">Otaku Mix</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuMix" src="https://i.postimg.cc/br92MzX4/Otaku-Mix400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="otakuFresh()">
+                    <h2 id="title">Otaku Fresh</h2>
+                    <h2 id="precio">$26.000</h2>
+                </div>
+                <img class="imgRamen" id="imgOtakuFresh" src="https://i.postimg.cc/15yFFNwS/Otaku-Fresh400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheTempura()">
+                    <h2 id="title">Parche Tempura</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheTempura" src="https://i.postimg.cc/MZ7RXYct/Parche-Tempura400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheMix()">
+                    <h2 id="title">Parche Mix</h2>
+                    <h2 id="precio">$24.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheMix" src="https://i.postimg.cc/br92MzX4/Parche-Mix400.png" alt="Producto">
+            </article>
+            <article class="article">
+                <div id="item" onclick="parcheFresh()">
+                    <h2 id="title">Parche Fresh</h2>
+                    <h2 id="precio">$26.000</h2>
+                </div>
+                <img class="imgRamen" id="imgParcheFresh" src="https://i.postimg.cc/15yFFNwS/Parche-Fresh400.png" alt="Producto">
+            </article>
+        </section>
+    </div>
+</body>
+</html>
